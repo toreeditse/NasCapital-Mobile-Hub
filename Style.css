@@ -1,26 +1,22 @@
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
-  background: linear-gradient(to bottom, #0f0f0f, #1a1a1a); /* dark black gradient */
-  color: #ffffff;
+  background-color: #fefcf9;
 }
 
-/* Top Bar */
 .top-bar {
-  background: linear-gradient(to right, #000000, #1e1e2f);
+  background-color: #f5f0e1;
   text-align: center;
   padding: 0.5rem;
   font-family: 'Courier New', monospace;
   font-size: 0.9rem;
-  color: #ffffff;
 }
 
-/* Navbar */
 .main-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #000000, #0a0f4a); /* black to navy blue */
+  background-color: #1b1b1b;
   color: white;
   padding: 1rem 2rem;
 }
@@ -45,42 +41,20 @@ body {
 }
 
 .nav-links a:hover {
-  color: #66ccff; /* light blue */
+  color: #e2b887;
 }
 
-.icons a,
-.icon-bar a {
+.icons a {
   color: white;
   margin-left: 1rem;
   font-size: 1.2rem;
-  transition: 0.3s;
 }
 
-.icons a:hover,
-.icon-bar a:hover {
-  color: #66ccff;
-}
-
-/* Hero Section */
 .hero {
   background: url('phone\ store.jpg') no-repeat center center/cover;
   color: #fff;
   text-align: center;
   padding: 5rem 2rem;
-  position: relative;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.6); /* dark overlay */
-  z-index: 0;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
 }
 
 .hero-content h1 {
@@ -94,27 +68,24 @@ body {
 }
 
 .btn-shop {
-  background: linear-gradient(to right, #0077ff, #0050c8);
+  background-color: #e2b887;
   padding: 0.75rem 1.5rem;
-  color: #ffffff;
+  color: #1a1a1a;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
 }
 
 .btn-shop:hover {
-  background: linear-gradient(to right, #0050c8, #003388);
+  background-color: #d1a86f;
 }
 
-/* Featured Section */
 .featured {
   padding: 3rem 2rem;
   text-align: center;
-  background: #1e1e1e;
 }
 
-/* Phone Cards */
 .phone-grid {
   display: flex;
   justify-content: center;
@@ -124,12 +95,12 @@ body {
 }
 
 .phone-card {
-  background: #ffffff;
-  color: #000000;
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 10px;
   padding: 1rem;
   max-width: 250px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .phone-card img {
@@ -141,31 +112,51 @@ body {
   margin-top: 1rem;
   font-size: 1.2rem;
 }
+/* Base Styles */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background: #f3f0e5;
+  color: #2d2d2d;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
 
-/* Order Section */
+/* Headings */
+h2, h3 {
+  color: #5e412f;
+  font-family: 'Georgia', serif;
+  text-align: center;
+}
+
+/* Main Section Container */
 section.order-section {
   max-width: 700px;
   margin: 2rem auto;
-  background: #ffffff;
-  color: #000000;
+  background: #fff8f0;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
 }
 
-/* Order Box */
+/* Order Details Box */
 .order-details {
-  background: #f2f2f2;
-  border: 1px solid #dcdcdc;
+  background: #fcf4e1;
+  border: 1px solid #ecd9c6;
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 8px;
 }
 
-/* Cart Summary */
+.order-details p,
+.order-details label {
+  font-size: 1rem;
+}
+
+/* Cart Summary Box */
 .cart-box {
-  background: #e8f0ff;
-  border: 1px dashed #89b3ff;
+  background: #fff0dd;
+  border: 1px dashed #d4b483;
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 8px;
@@ -173,10 +164,9 @@ section.order-section {
 
 .cart-box h3 {
   margin-top: 0;
-  color: #003388;
 }
 
-/* Form */
+/* Form Styles */
 .delivery-form {
   display: flex;
   flex-direction: column;
@@ -191,12 +181,11 @@ section.order-section {
 .delivery-form textarea {
   padding: 0.6rem;
   margin-top: 0.3rem;
-  border: 1px solid #aaa;
+  border: 1px solid #c5a880;
   border-radius: 6px;
   font-size: 1rem;
   font-family: inherit;
-  background-color: #fefefe;
-  color: #000000;
+  background-color: #fffdf9;
 }
 
 .delivery-form textarea {
@@ -208,7 +197,7 @@ section.order-section {
 button[type="submit"] {
   margin-top: 1.5rem;
   padding: 0.75rem;
-  background: linear-gradient(to right, #0066cc, #003366);
+  background: #ff914d;
   color: white;
   border: none;
   border-radius: 8px;
@@ -218,5 +207,16 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background: linear-gradient(to right, #0050aa, #002255);
+  background: #e87428;
+}
+.icon-bar a {
+  color: white;
+  margin-left: 15px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.icon-bar a:hover {
+  color: #f0c040;
 }
